@@ -4,7 +4,7 @@ const mysql = require('mysql');
 var satelize = require('satelize');
 
 const app = express()
-const port = process.env.port || 5000
+const port = 3000
 
 app.use(express.static('public'))
 app.use(express.static('views/public'))
@@ -84,6 +84,6 @@ app.post('/en-us', function (req, res){
 })
 
 
-app.listen(port, () => {
+app.listen(process.env.PORT || port, () => {
     console.log(`leads app listening at http://localhost:${port}`)
 })
