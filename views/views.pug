@@ -1,0 +1,22 @@
+html
+    head
+        title page views
+        link(rel='stylesheet', href='./css/bootstrap.min.css', type='text/css')
+        script(src="./js/bootstrap.bundle.min.js")
+    body
+    dev(class="container")
+        <h3 class= "text-center">views details</h1>
+        table(class='table table-striped')
+            thead
+                tr
+                    th id
+                    th ip
+                    th Country
+                    th Created
+
+            each item in items
+                tr
+                    td=item.id
+                    td=item.Ipaddress
+                    td=item.Country
+                    td=item.created
