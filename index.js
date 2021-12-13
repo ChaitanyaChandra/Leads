@@ -13,7 +13,7 @@ app.set('view engine', 'pug')
 app.use(bodyParser.urlencoded({extended: false}))
 
 const con = mysql.createConnection({
-    host: "152.70.74.60",
+    host: "152.70.72.91",
     user: "root",
     password: "@123Chaitu",
     database: "leads_db",
