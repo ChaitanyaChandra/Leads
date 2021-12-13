@@ -60,7 +60,7 @@ CREATE TABLE leads(
     Created_at TIMESTAMP DEFAULT NOW() NOT NULL
 );
 CREATE TABLE views(
-	id INT AUTO_INCREMENT NOT NULL  PRIMARY KEY ,
+    id INT AUTO_INCREMENT NOT NULL  PRIMARY KEY ,
     Ipaddress varchar(15),
     country_code varchar(5),
     userInfo longtext check (JSON_VALID(userInfo)),
