@@ -58,13 +58,13 @@ CREATE TABLE leads(
     userInfo longtext check (JSON_VALID(userInfo)),
     #userInfo JSON,
     Created_at TIMESTAMP DEFAULT NOW() NOT NULL
-)
+);
 CREATE TABLE views(
-                      id INT AUTO_INCREMENT NOT NULL  PRIMARY KEY ,
-                      Ipaddress varchar(15),
-                      country_code varchar(5),
-                      userInfo longtext check (JSON_VALID(userInfo)),
-                      #userInfo JSON,
-                      Created_at TIMESTAMP DEFAULT NOW() NOT NULL
-)
+	id INT AUTO_INCREMENT NOT NULL  PRIMARY KEY ,
+    Ipaddress varchar(15),
+    country_code varchar(5),
+    userInfo longtext check (JSON_VALID(userInfo)),
+    #userInfo JSON,
+    Created_at TIMESTAMP DEFAULT NOW() NOT NULL
+);
 ```
