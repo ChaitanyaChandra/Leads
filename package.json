@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ChandraChaitanya/Leads.git"
+    "url": "git+https://github.com/ChaitanyaChandra/Leads.git"
   },
-  "author": "ChandraChaitanya",
+  "author": "Chaitanya Chandra",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ChandraChaitanya/Leads/issues"
+    "url": "https://github.com/ChaitanyaChandra/Leads/issues"
   },
-  "homepage": "https://github.com/ChandraChaitanya/Leads#readme",
+  "homepage": "https://github.com/ChaitanyaChandra/Leads#readme",
   "dependencies": {
     "body-parser": "^1.19.0",
     "express": "^4.17.1",
