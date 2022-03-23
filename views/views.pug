@@ -9,14 +9,14 @@ html
         table(class='table table-striped')
             thead
                 tr
-                    th id
-                    th ip
-                    th Country
-                    th Created
+                    th Created_on
+                    th Ipaddress
+                    th Country_code
+                    th UserInfo
 
             each item in items
                 tr
-                    td=item.id
+                    td=item.Created_on
                     td=item.Ipaddress
-                    td=item.Country
-                    td=item.created
+                    td=item.Country_code
+                    td=item.UserInfo

@@ -9,21 +9,23 @@ html
         table(class='table table-striped')
             thead
                 tr
-                    th id
+                    th Created_on
                     th Name
                     th Email
                     th Company
                     th Subject
                     th Message
-                    th Created
-                    th Country
+                    th Ipaddress
+                    th UserInfo
+                    th Country_code
             each item in items
                 tr
-                    td=item.id
+                    td=item.Created_on
                     td=item.Name
                     td=item.Email
                     td=item.Company
                     td=item.Subject
                     td=item.Message
-                    td=item.created
-                    td=item.Country
+                    th Ipaddress
+                    td=item.UserInfo
+                    td=item.Country_code
