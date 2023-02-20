@@ -216,6 +216,34 @@ app.post('/views', function(req, res) {
 })
 
 
+// error navigation
+app.use((error, req, res, next) => {
+    res.status(error.status || 500).send({
+        error: {
+            status: error.status || 500,
+            message: error.message || 'Internal Server Error',
+        },
+    });
+    res.sendFile('public/error.html', {
+        root: __dirname
+    })
+});
+
+app.use(function(req, res, next){
+    res.status(404);
+    res.sendFile('public/error.html', {
+        root: __dirname
+    })
+})
+
+app.get('/health', (req, res) => {
+    var stat = {
+        status: 'OK',
+        status_code: 200
+    };
+    res.json(stat);
+});
+
 app.listen(process.env.PORT || port, () => {
     console.log(`leads app listening at http://localhost:${port}`)
 })
