@@ -244,6 +244,6 @@ app.get('/health', (req, res) => {
     res.json(stat);
 });
 
-app.listen(process.env.PORT || port, () => {
+app.listen(process.env.port || port, () => {
     console.log(`leads app listening at http://localhost:${port}`)
 })
