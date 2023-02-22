@@ -13,8 +13,8 @@ var Views_table_name = "chaitu-dynamodb-nonpord-ap-south-1-dev-views"
 let awsConfig = {
     "region": "ap-south-1",
     "endpoint": "http://dynamodb.ap-south-1.amazonaws.com",
-    "accessKeyId": "AKIAZL6G3YXMXTR6AO5L",
-    "secretAccessKey": "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"
+    "accessKeyId": "AKIAQKE37JABQYUKU4WO",
+    "secretAccessKey": "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"
 };
 AWS.config.update(awsConfig);
 
