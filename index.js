@@ -231,10 +231,11 @@ app.use((error, req, res, next) => {
 });
 
 app.get('/health', (req, res) => {
+    let cmd_hostname = child_process.execSync("hostname");
     var stat = {
         status: 'OK',
         status_code: 200,
-        host_name: child_process.execSync("hostname").toString()
+        host_name: cmd_hostname.toString()
     };
     res.json(stat);
 });
