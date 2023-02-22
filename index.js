@@ -3,6 +3,7 @@ const bodyParser = require('body-parser');
 const mysql = require('mysql');
 var satelize = require('satelize');
 var AWS = require("aws-sdk");
+var child_process = require("child_process")
 
 let user = "chaitu"
 let password = "@123Chaitu"
@@ -232,7 +233,8 @@ app.use((error, req, res, next) => {
 app.get('/health', (req, res) => {
     var stat = {
         status: 'OK',
-        status_code: 200
+        status_code: 200,
+        host_name = child_process.execSync("hostname")
     };
     res.json(stat);
 });
