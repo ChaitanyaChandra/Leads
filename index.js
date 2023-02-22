@@ -229,13 +229,6 @@ app.use((error, req, res, next) => {
     })
 });
 
-app.use(function(req, res, next){
-    res.status(404);
-    res.sendFile('public/error.html', {
-        root: __dirname
-    })
-})
-
 app.get('/health', (req, res) => {
     var stat = {
         status: 'OK',
@@ -243,6 +236,13 @@ app.get('/health', (req, res) => {
     };
     res.json(stat);
 });
+
+app.use(function(req, res, next){
+    res.status(404);
+    res.sendFile('public/error.html', {
+        root: __dirname
+    })
+})
 
 app.listen(process.env.port || port, () => {
     console.log(`leads app listening at http://localhost:${port}`)
