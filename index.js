@@ -234,7 +234,7 @@ app.get('/health', (req, res) => {
     var stat = {
         status: 'OK',
         status_code: 200,
-        host_name: child_process.execSync("hostname")
+        host_name: child_process.execSync("hostname").toString()
     };
     res.json(stat);
 });
